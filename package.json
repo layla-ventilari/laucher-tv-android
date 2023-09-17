@@ -10,9 +10,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.27",
     "react": "18.2.0",
-    "react-native": "0.72.4",
-    "react-native-tvos": "^0.72.4-0"
+    "react-native": "npm:react-native-tvos@latest",
+    "react-native-tvos": "^0.72.4-0",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
