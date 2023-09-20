@@ -11,3 +11,8 @@ export const Title = styled.Text`
   color: ${({ theme}) => theme.COLORS.LAVENDER_500 };
   font-size: 32px;
 `;
+
+export const SubTitle = styled.Text`
+  color: ${({ theme}) => theme.COLORS.LAVENDER_700 };
+  font-size: 32px;
+`;

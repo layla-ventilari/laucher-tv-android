@@ -1,10 +1,14 @@
-import { Container, Title } from "./styles";
+import { Header } from "../../components/Header";
+import { ImageGallery } from "../../components/ImageGallery";
+
+import { Container} from "./styles";
 
 
 export function Home(){
     return(
         <Container>
-            <Title>Home</Title>
+            <Header />
+            <ImageGallery />
         </Container>
     )
 }
