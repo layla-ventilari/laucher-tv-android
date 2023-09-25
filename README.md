@@ -1,6 +1,8 @@
 # Laucher Android Tv 📽️
 O Launcher de Cinema para Android TV é a porta de entrada para um universo cinematográfico em sua Android TV. Com uma interface elegante e amigável, oferecemos uma experiência de streaming imersiva, permitindo que você descubra  uma  coleção de filmes e  séries com facilidade. Personalize sua tela inicial com seus favoritos e transforme sua sala em um cinema particular. Explore, escolha e desfrute de entretenimento de qualidade na comodidade da sua casa.
 
+![launcher-image](https://github.com/layla-ventilari/launcher-tv/assets/99200113/903dc307-6f01-44e0-903b-a42e99e5a6ae)
+
 ## Conteúdo
 
 - [Getting Started](#getting-started)
