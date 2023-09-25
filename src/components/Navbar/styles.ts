@@ -20,18 +20,23 @@ export const TabsContainer = styled.View`
 `;
 
 export const TabButton = styled.TouchableOpacity`
-  padding: 16px;
+  padding: 24px;
   background-color: transparent;
-  //border-bottom-width: 2px;
-  //border-bottom-color: transparent;
 `;
 
+
+
 export const FocusedTabButton = styled(TabButton)`
-  border-bottom-color: ${theme.COLORS.GRAY_200};
+   ${(props: any) =>
+    props.focused &&
+    `
+    background-color: ${theme.COLORS.LAVENDER_500}; 
+  `}
 `;
 
 export const TabLabel = styled.Text<TabLabelProps>`
-  color: ${props => (props.focused ? theme.COLORS.GRAY_100 : theme.COLORS.GRAY_200)};
-  font-size: 32px;
-  font-weight: ${props => (props.focused ? 'bold' : 'normal')};
+    color: ${(props) => (props.focused ? theme.COLORS.GRAY_100 : theme.COLORS.GRAY_200)};
+    font-size: ${(props) => (props.focused ? '36px' : '32px')}; 
+    opacity: ${(props) => (props.focused ? '1' : '0.7')}; 
+    font-weight: ${(props) => (props.focused ? 'bold' : 'normal')};
 `;

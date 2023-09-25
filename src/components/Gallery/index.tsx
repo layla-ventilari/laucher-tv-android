@@ -17,47 +17,47 @@ import {
   Title,
 } from './styles';
 
+// Define the prop types for an individual gallery item.
 type ItemProps = {
-  item: ItemsData;
-  onPress: () => void;
-  isFocused: boolean;
+  item: ItemsData;    // Represents the data for a single item.
+  onPress: () => void; // Callback function when an item is pressed.
+  isFocused: boolean; // Indicates if the item is currently focused.
 };
 
+// Component for rendering an individual gallery item.
 const GalleryItemComponent = ({ item, onPress, isFocused }: ItemProps) => {
-  console.log(`Item ${item.title} isFocused: ${isFocused}`);
   return (
     <TouchableOpacity onPress={onPress}>
       <GalleryItem>
-      {/* Exibe a imagem do item */}
-      <ItemImg source={item.image} />
-  
-      {/* Exibe o título do item */}
-      <ItemText>{item.title}</ItemText>
-    </GalleryItem>
+        {/* Display the item's image */}
+        <ItemImg source={item.image} />
+        
+        {/* Display the item's title */}
+        <ItemText>{item.title}</ItemText>
+      </GalleryItem>
     </TouchableOpacity>
-  )
-}
-;
-  
-  
+  );
+};
 
+// Main Gallery component
 export function Gallery() {
   const [focusedIndex, setFocusedIndex] = useState(0);
 
+  // Callback function to handle changes in focus
   const handleFocusChange = useCallback((newIndex: number) => {
     setFocusedIndex(newIndex);
-    console.log(newIndex);
   }, []);
 
   return (
     <Container>
       <HighlightContainer>
-      <HighlightImg source={Data[focusedIndex].image}>
-        <TextOverlay>
+        <HighlightImg source={Data[focusedIndex].image}>
+          <TextOverlay>
+            {/* Display the title and description of the currently highlighted item */}
             <Title>{Data[focusedIndex].title}</Title>
             <Description>{Data[focusedIndex].description}</Description>
-        </TextOverlay>
-      </HighlightImg>
+          </TextOverlay>
+        </HighlightImg>
         <HighlightTitle>Favorites</HighlightTitle>
       </HighlightContainer>
 
@@ -66,16 +66,16 @@ export function Gallery() {
           horizontal={true}
           showsHorizontalScrollIndicator={false}
         >
+          {/* Map through the data and render each gallery item */}
           {Data.map((item, index) => {
-            console.log(`Item ${index} isFocused: ${index === focusedIndex}`)
-            return(
+            return (
               <GalleryItemComponent
-              key={item.id}
-              item={item}
-              onPress={() => handleFocusChange(index)}
-              isFocused={index === focusedIndex}
-            />
-          )
+                key={item.id}
+                item={item}
+                onPress={() => handleFocusChange(index)}
+                isFocused={index === focusedIndex}
+              />
+            );
           })}
         </ScrollViewContainer>
       </GalleryContainer>
