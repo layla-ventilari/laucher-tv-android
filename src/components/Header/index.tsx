@@ -1,14 +1,15 @@
-import { Container, Logo } from "./styles";
-import  LogoImg  from "../../assets/Logo.png";
-import { Navbar } from "../Navbar";
+import { Container, Avatar } from "./styles";
+import  AvatarImg  from "../../assets/Avatar.png";
+
 import DigitalClock from "../Clock";
+import Navbar from "../Navbar";
 
 
 
 export function Header(){
   return(
   <Container>
-    <Logo source={LogoImg}/>
+    <Avatar source={AvatarImg}/>
     <Navbar />
     <DigitalClock />
   </Container>

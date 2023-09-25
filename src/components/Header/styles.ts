@@ -6,9 +6,10 @@ width: 100%;
 flex-direction: row;
 align-items: center;
 justify-content: center;
+padding: 0 58px;
 `;
 
-export const Logo = styled.Image`
-width: 46px;
-height: 46px;
+export const Avatar = styled.Image`
+width: 32px;
+height: 32px;
 `;

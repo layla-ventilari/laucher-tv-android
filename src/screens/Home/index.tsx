@@ -1,14 +1,17 @@
 import { Header } from "../../components/Header";
-import { ImageGallery } from "../../components/ImageGallery";
+import { Gallery } from "../../components/Gallery";
+import { Container, StyledImageBackground} from "./styles";
 
-import { Container} from "./styles";
-
+const backgroundImage = require('../../assets/gradient-purple.png');
 
 export function Home(){
     return(
-        <Container>
+        <StyledImageBackground source={backgroundImage} resizeMode="cover">
+          <Container>
             <Header />
-            <ImageGallery />
-        </Container>
+            <Gallery />
+        </Container>  
+        </StyledImageBackground>
+        
     )
 }

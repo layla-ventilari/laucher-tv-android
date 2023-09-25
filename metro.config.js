@@ -10,7 +10,9 @@ const { assetExts, sourceExts } = defaultConfig.resolver;
  * @type {import('metro-config').MetroConfig}
  */
 const config = {
-  
+    resolver: {
+        assetExts: [...assetExts, "svg", "png", "jpg", "jpeg", "gif"] 
+      },
 };
 
 module.exports = mergeConfig(defaultConfig, config);
